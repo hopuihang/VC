@@ -62,8 +62,8 @@ len = length(x);
 for i=1:len
     a=x(i);b=y(i);
     pixShare=generateShare(s0a,s0b);
-    share1((2*a-1):(2*a),(2*b-1):(2*b)) = pixShare(1:2,1:2);
-    share2((2*a-1):(2*a),(2*b-1):(2*b)) = ~pixShare(1:2,1:2);
+    share1((a),(2*b-1):(2*b))=pixShare(1,1:2);
+    share2((a),(2*b-1):(2*b))=pixShare(2,1:2);
 end
 
 share12=bitor(share1, share2);
